@@ -7,8 +7,8 @@ import {Locations} from "../../mocks/Locations";
 const useStyles = createStyles((theme) => ({
 	wrapper: {
 		position: 'relative',
-		paddingTop: 180,
-		paddingBottom: 130,
+		paddingTop: 100,
+		paddingBottom: 80,
 		backgroundImage:
 			`url(${bgImg})`,
 		backgroundSize: 'cover',
@@ -102,7 +102,7 @@ const LocationsSections = () => {
 			<Overlay color="#000" opacity={0.65} zIndex={1}/>
 
 			<div className={classes.inner}>
-				<Title className={classes.title}>
+				<Title className={classes.title} mb={30}>
 					Ultra-fast {' '}
 					<Text component="span" inherit className={classes.highlight}>
 						servers
