@@ -108,7 +108,7 @@ export function AppNavbar({links}: HeaderActionProps) {
 	});
 
 	return (
-		<Header height={HEADER_HEIGHT} sx={{borderBottom: 0}} mb={30}>
+		<Header height={HEADER_HEIGHT} sx={{borderBottom: 0}}>
 			<Container className={classes.inner} fluid>
 				<Group>
 					<Burger
