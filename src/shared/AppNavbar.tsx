@@ -13,6 +13,7 @@ import {
 import {useBooleanToggle} from '@mantine/hooks';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronDown, faCode} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 const HEADER_HEIGHT = 60;
 
@@ -65,7 +66,7 @@ export function AppNavbar({links}: HeaderActionProps) {
 	const [opened, toggleOpened] = useBooleanToggle(false);
 	const items = links.map((link) => {
 		const menuItems = link.links?.map((item) => (
-			<Menu.Item key={item.link}>{item.label}</Menu.Item>
+			<Menu.Item key={item.label} component="a" href={item.link}>{item.label}</Menu.Item>
 		));
 
 		if (menuItems) {
@@ -100,7 +101,6 @@ export function AppNavbar({links}: HeaderActionProps) {
 				key={link.label}
 				href={link.link}
 				className={classes.link}
-				onClick={(event) => event.preventDefault()}
 			>
 				{link.label}
 			</a>
